@@ -1,3 +1,16 @@
-.carousel-img-box {
+.carousel-box {
     display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 600px;
+    margin: 0 auto;
+}
+
+/* responsive css */
+
+/* for mobile */
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+    .carousel-box {
+        width: 100%;
+    }
 }
