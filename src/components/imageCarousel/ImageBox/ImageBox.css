@@ -2,6 +2,7 @@
     margin: 10px;
     padding: 5px;
     border: 1px solid #fff;
+    display: none;
 }
 
 .img_box img {
@@ -12,7 +13,8 @@
 }
 
 .img_box.active {
-    box-shadow: 1px 1px 2px 2px red;
+    box-shadow: 1px 1px 2px 2px #d4d4d4;
+    display: block;
 }
 
 /* responsive css */
