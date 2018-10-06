@@ -1,0 +1,14 @@
+.img_box {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #d4d4d4;
+}
+
+.img_box img {
+    height: 300px;
+    /* width: 200px; */
+}
+
+.img_box.active {
+    box-shadow: 1px 1px 2px 2px red;
+}

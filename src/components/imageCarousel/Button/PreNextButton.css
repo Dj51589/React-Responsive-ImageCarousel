@@ -1,0 +1,69 @@
+.carousel-buttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button {
+    background-color: #337ab7;
+    padding: 10px 35px;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 5px;
+}
+
+.prev::after {
+    content: 'Prev';
+}
+
+.next::after {
+    content: 'Next';
+}
+
+.button:hover {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+
+.disable {
+    pointer-events: none;
+    background-color: #d4d4d4 !important;
+}
+
+/* responsive css */
+
+/* for mobile */
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+    .carousel-buttons {
+        position: absolute;
+        top: 25%;
+        width: 100%;
+    }
+
+    .button {
+        padding: 10px;
+        width: 15px;
+        border-radius: 50%;
+    }
+
+    .prev {
+        float: left;
+        content: '';
+    }
+
+    .prev::after {
+        content: '<';
+    }
+
+    .next {
+        float: right;
+        content: '';
+    }
+
+    .next::after {
+        content: '>';
+    }
+}
