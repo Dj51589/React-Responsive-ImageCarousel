@@ -13,33 +13,32 @@ class ImageCarousel extends Component {
   componentWillReceiveProps = (nextProps) => {
     let totalImage = nextProps.images.length;
     let activeIndex;
-    if (totalImage === 1) {
+    if (totalImage === 1) { // if total image of slider is 1 then by default first image will be active
       activeIndex = 1;
-      this.setState({
-        activeIndex: activeIndex
-      });
     } else {
-      activeIndex = Math.floor(totalImage / 2);
-      this.setState({
-        activeIndex: activeIndex
-      });
+      activeIndex = Math.floor(totalImage / 2); // if total image of slider is more than 2 then by default 
+                                                // image will be the quotient
     }
     this.setState({
+      activeIndex: activeIndex,
       prevDisabled: activeIndex === 1,
       nextDisabled: activeIndex === totalImage
     });
   };
 
+  // previous click
   prevClick = () => {
     let totalImage = this.props.images.length;
     var activeIndex = this.state.activeIndex - 1;
-    this.setState({
+    this.setState({ // on each prev/next click, setting current active image index as well as doing check to eanble/disable
+                    // prev and next button
       activeIndex: activeIndex,
       prevDisabled: activeIndex === 1,
       nextDisabled: activeIndex === totalImage,
     });
   }
-
+  
+  // next click
   nextClick = () => {
     let totalImage = this.props.images.length;
     var activeIndex = this.state.activeIndex + 1;
@@ -52,6 +51,7 @@ class ImageCarousel extends Component {
 
   render() {
     let {images} = this.props;
+    // creating all slider images here
     const imageList = images.map((image, index) =>
       <ImageBox src = {image.webformatURL}
         alt = {image.tag}
@@ -69,7 +69,7 @@ class ImageCarousel extends Component {
         </div>
         {
           images.length > 0 ? 
-          <PreNextButton
+          <PreNextButton // component that render buttons
             prevClick = {
               this.prevClick
             }

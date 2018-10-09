@@ -20,7 +20,6 @@ class App extends Component {
         images: response.hits
       });
     }, (error) => {
-      console.log(error);
     });
   }
 
