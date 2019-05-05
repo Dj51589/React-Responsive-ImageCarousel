@@ -74,6 +74,6 @@ Now, app is ready to be deployed!
 ## Contact Me
 - Dheeraj Jaiswal
 - jdheeraj32@gmail.com
-- +971 58281525828, 9810550702
+- +971 581525828, 9810550702
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
